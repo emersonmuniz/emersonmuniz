@@ -1,5 +1,5 @@
 - Hi, I’m @emersonmuniz
-- I’m interested in development and learn about it and business... always.
+- I’m interested in development and learn about IT, AI and business.
 - I’m currently learning php, python, and other things.
 - I want to learn C#, Java and C/C++
 
