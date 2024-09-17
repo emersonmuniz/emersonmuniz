@@ -2,5 +2,5 @@ title: Emerson Muniz
 email: seuemail@example.com
 description: "Bem-vindo ao meu site pessoal construído com Jekyll."
 baseurl: "" # Leave empty
-url: "https://emersonmuniz.github.io/emersonmuniz/" # Substitua com o URL do seu GitHub Pages
+url: "<https://emersonmuniz.github.io/emersonmuniz/>" # Substitua com o URL do seu GitHub Pages
 theme: minima
