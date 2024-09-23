@@ -60,11 +60,11 @@ Com as ferramentas de linha de comando instaladas, vamos proceder com a instala�
 **Nota:** Caso o comando para verificar a versão instalada não funcionar, adicione o Homebrew ao caminho (`PATH`) para garantir que os comandos funcionem corretamente. Para fazer isso, execute no Terminal:
 
     
-    ```bash
+```bash
     echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
     source ~/.bash_profile
     
-    ```
+```
 
 ### Passo 3: Verificar a Instalação do Homebrew
 
