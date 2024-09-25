@@ -1,5 +1,3 @@
-# macOS Mavericks - Instalando Homebrew
-
 ## Como Instalar o Homebrew no macOS Mavericks
 
 ### Introdução
@@ -16,8 +14,8 @@ O Homebrew é um gerenciador de pacotes, oferece uma maneira fácil de instalar 
 
 Antes de instalar o Homebrew, é necessário garantir que as ferramentas de linha de comando do Xcode estejam instaladas.
 
-1. Abra o **Terminal**.
-2. Execute o comando para instalar as ferramentas de linha de comando do Xcode:
+* Abra o **Terminal**.
+* Execute o comando para instalar as ferramentas de linha de comando do Xcode:
     
     ```bash
     xcode-select --install
@@ -26,33 +24,33 @@ Antes de instalar o Homebrew, é necessário garantir que as ferramentas de linh
 
 ![Terminal](./images/Terminal-XCode-Comand-Line.png)
 
-3. Uma janela aparecerá perguntando se você deseja instalar as ferramentas. Clique em **Instalar** e siga as instruções fornecidas.
+* Uma janela aparecerá perguntando se você deseja instalar as ferramentas. Clique em **Instalar** e siga as instruções fornecidas.
 
 ### Passo 2: Instalar o Homebrew
 
 Com as ferramentas de linha de comando instaladas, vamos proceder com a instalação do Homebrew.
 
-1. No Terminal, execute o comando abaixo para baixar e instalar o Homebrew:
+* No Terminal, execute o comando abaixo para baixar e instalar o Homebrew:
     
     ```bash
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     
     ```
     
-2. O script de instalação solicitará a sua senha de administrador. Insira-a e pressione Enter.
-3. Siga as instruções no terminal. O Homebrew irá mostrar o que irá executar, precione a tecla **ENTER**.
-4. Após a instalação, verifique a versão do HomeBrew para garantir que está correta a instalação.
+* O script de instalação solicitará a sua senha de administrador. Insira-a e precione a tecla **ENTER**.
+
+![Terminal](./images/Terminal-HomeBrew-Install-01.png)
+
+* Siga as instruções no terminal. O Homebrew irá mostrar o que irá executar, precione a tecla **ENTER**.
+
+![Terminal](./images/Terminal-HomeBrew-Install-02.png)
+
+* Após a instalação, verifique a versão do HomeBrew para garantir que está correta a instalação.
     
     ```bash
     brew --version
     
     ```
-
-![Terminal](./images/Terminal-HomeBrew-Install-01.png)
-
-![Terminal](./images/Terminal-HomeBrew-Install-02.png)
-
-![Terminal](./images/Terminal-HomeBrew-Install-03.png)
 
 ![Terminal](./images/Terminal-HomeBrew-Install-04.png)
 
@@ -68,7 +66,7 @@ Com as ferramentas de linha de comando instaladas, vamos proceder com a instala�
 
 ### Passo 3: Verificar a Instalação do Homebrew
 
-Agora, para garantir que o Homebrew está instalado com sucesso, execute o comando:
+Agora, para garantir que o Homebrew está instalado corretamente, execute o comando:
 
 ```bash
 brew doctor
@@ -100,14 +98,14 @@ brew install python
 
 O Homebrew facilita a atualização de ferramentas e pacotes.
 
-1. Para atualizar o Homebrew:
+* Para atualizar o Homebrew:
     
     ```bash
     brew update
     
     ```
     
-2. Para atualizar qualquer ferramenta instalada (por exemplo, o Git):
+* Para atualizar qualquer ferramenta instalada (por exemplo, o Git):
     
     ```bash
     brew upgrade git
