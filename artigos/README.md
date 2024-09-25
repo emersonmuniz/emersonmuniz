@@ -9,8 +9,8 @@ Como atualizei meu macOS ( na verdade usando patcher instalei do zero para o Mav
 ### Instalações macOS
 
 
-* [Instalando o HomeBrew.](https://github.com/emersonmuniz/emersonmuniz/tree/main/artigos/macos-mavericks-homebrew)
-
+* [Instalando o HomeBrew](https://github.com/emersonmuniz/emersonmuniz/tree/main/artigos/macos-mavericks-homebrew)
+* [Instalando PHP e Laravel](https://github.com/emersonmuniz/emersonmuniz/tree/main/artigos/macos-mavericks-php)
 
 ### Instalações Linux
 
