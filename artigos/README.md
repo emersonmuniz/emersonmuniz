@@ -11,6 +11,7 @@ Como atualizei meu macOS ( na verdade usando patcher instalei do zero para o Mav
 
 * [Instalando o HomeBrew](https://github.com/emersonmuniz/emersonmuniz/tree/main/artigos/macos-mavericks-homebrew)
 * [Instalando PHP e Laravel](https://github.com/emersonmuniz/emersonmuniz/tree/main/artigos/macos-mavericks-php)
+* [Usando Bancos de Dados](https://github.com/emersonmuniz/emersonmuniz/tree/main/artigos/macos-mavericks-database)
 
 ### Instalações Linux
 
