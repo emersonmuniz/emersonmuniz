@@ -1,6 +1,37 @@
 body {
-    padding-top: 56px; /* Ajusta para a navbar fixa */
+    background-color: #1e1e1e;  /* Preto suave */
+    color: #d0a96f;  /* Tons de café */
 }
+
+.navbar, .footer {
+    background-color: #333;  /* Cor mais escura para nav e footer */
+}
+
+.card {
+    background-color: #2d2d2d;
+    border: none;
+}
+
+.btn {
+    /* Estilos personalizados para o botão */
+    padding: 1rem;
+    display: flex; /* Adiciona display flex ao botão para melhor controle */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+  }
+
+.card-title {
+    color: #d0a96f;
+}
+
+.card-text {
+    color: #f1f1f1;
+}
+
+.img-fluid {
+    vertical-align: center;
+    height: 200px; 
+  }
 
 h2 {
     border-bottom: 2px solid #007bff;
