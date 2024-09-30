@@ -28,15 +28,16 @@
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
 
     <!-- My GitHub -->
+
     <link rel="stylesheet" href="https://unpkg.com/octicons@4.4.0/build/font/octicons.css">
     <link rel="stylesheet" href="https://unpkg.com/github-activity-feed@latest/dist/github-activity.min.css">
-    
     <script type="text/javascript" src="https://unpkg.com/mustache@4.2.0/mustache.min.js"></script>
     <script type="text/javascript" src="https://unpkg.com/github-activity-feed@latest/dist/github-activity.min.js"></script>
-    
-    <!-- if using dark theme add this in addition to the main CSS file -->
     <link rel="stylesheet" href="https://unpkg.com/github-activity-feed@latest/dist/github-activity.dark.min.css">
-    
+
+    <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"> </script>
+    <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
+
 </head> 
 
 <body>
@@ -50,10 +51,10 @@
 		                <h1 class="name">Emerson Muniz</h1>
 		                <h2 class="desc">Desenvolvedor</h2>   
 		                <ul class="social list-inline">
-		                    <li class="list-inline-item"><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-		                    <li class="list-inline-item"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-		                    <li class="list-inline-item"><a href="#"><i class="fa-brands fa-github-alt"></i></a></li>    
-		                    <li class="list-inline-item last-item"><a href="#"><i class="fa-brands fa-codepen"></i></a></li>                
+		                    <li class="list-inline-item"><a href="https://x.com/emerson_muniz"><i class="fa-brands fa-x-twitter"></i></a></li>
+		                    <li class="list-inline-item"><a href="https://www.linkedin.com/in/emersonmuniz/"><i class="fa-brands fa-linkedin-in"></i></a></li>
+		                    <li class="list-inline-item"><a href="https://github.com/emersonmuniz"><i class="fa-brands fa-github-alt"></i></a></li>    
+		                    <li class="list-inline-item last-item"><a href="https://www.instagram.com/emerson_muniz/"><i class="fa-brands fa-instagram"></i></a></li>                
 		                </ul> 
 		            </div><!--//profile-->
 			    </div><!--//col-->
@@ -180,21 +181,35 @@
                 <section class="github section">
                     <div class="section-inner shadow-sm rounded">
                         <h2 class="heading">Meu GitHub</h2>
-                        <p>You can embed your GitHub contribution graph calendar using IonicaBizau's <a href="https://github.com/IonicaBizau/github-calendar" target="_blank">GitHub Calendar</a> widget. 
-                        
                         <div id="github-graph" class="github-graph">
-
+                            <script>
+                                GitHubCalendar(".github-graph", "emersonmuniz");
+                        
+                                // or enable responsive functionality:
+                                GitHubCalendar(".github-graph", "emersonmuniz", { responsive: true });
+                        
+                                 // Use a proxy
+                                 GitHubCalendar(".calendar", "your-username", {
+                                   proxy (username) {
+                                     return fetch(`https://your-proxy.com/github?user=${username}`)
+                                      } }).then(r => r.text())
+                            </script>
                         </div><!--//github-graph-->
 
-                        <div id="ghfeed" class="ghfeed"> </div><!--//ghfeed-->
-                        <script>
-                                 GitHubActivity.feed({
-                                    username: "emersonmuniz@gmail.com",
-                                    //repository: "", // optional
-                                    selector: "#ghfeed",
-                                    limit: 20, // optional
-                                });
-                        </script>
+                        <div id="feed" class="feed"> 
+
+                            <script>
+                                GitHubActivity.feed({
+                                   username: "emersonmuniz",
+                                   //repository: "", // optional
+                                   selector: "#feed",
+                                   limit: 10, // optional
+                               });
+
+                            </script>
+
+                        </div><!--//ghfeed-->
+
 
                     </div><!--//secton-inner-->
                 </section><!--//section-->
@@ -207,9 +222,11 @@
                         <h2 class="heading sr-only">Informação Básica</h2>
                         <div class="content">
                             <ul class="list-unstyled">
-                                <li><i class="fas fa-map-marker-alt"></i><span class="sr-only">Location:</span>San Francisco, US</li>
+                                <li><i class="fas fa-map-marker-alt"></i><span class="sr-only">Location:</span>Campo Grande, MS - Brasil </li>
+                                <!--
                                 <li><i class="fas fa-envelope"></i><span class="sr-only">Email:</span><a href="#">jameslee@website.com</a></li>
                                 <li><i class="fas fa-link"></i><span class="sr-only">Website:</span><a href="#">https://www.website.com</a></li>
+                                --> 
                             </ul>
                         </div><!--//content-->  
                     </div><!--//section-inner-->                 
@@ -221,39 +238,47 @@
                         <h2 class="heading">Conhecimentos</h2>
                         <div class="content">
                             <p class="intro">
-                                Intro about your skills goes here. Keep the list lean and only show your primary skillset. You can always provide a link to your Linkedin or Github profile so people can get more info there.</p>
+                                Conhecimentos adquiridos no decorrer da carreira como autoditada. Em breve farei exames de aptidão para melhor apurar os níveis. </p>
                             
                             <div class="skillset">
                                
+                                <!-- PHP -->
                                 <div class="item">
-                                    <h3 class="level-title">Python &amp; Django<span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="You can use the tooltip to explain more about your skill level..."><i class="fas fa-info-circle"></i>Expert</span></h3>
+                                    <h3 class="level-title">PHP &amp; Adianti Framework<span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Framework para negócios..."><i class="fas fa-info-circle"></i>Intermediário</span></h3>
 
                                     <div class="level-bar progress">
-									    <div class="progress-bar level-bar-inner" role="progressbar" style="width: 96%" aria-valuenow="96"  aria-valuemin="0" aria-valuemax="96"></div>
-									</div><!--//level-bar-->                               
-                                </div><!--//item-->
-                                
+									    <div class="progress-bar level-bar-inner" role="progressbar" style="width: 60%" aria-valuenow="60"  aria-valuemin="0" aria-valuemax="60"></div>
+									</div>                              
+                                </div>
+                                <!-- SQL -->
                                 <div class="item">
-                                    <h3 class="level-title">Javascript &amp; jQuery<span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="You can use the tooltip to explain more about your skill level..."><i class="fas fa-info-circle"></i>Expert</span></h3>
+                                    <h3 class="level-title">SQL <span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="..."><i class="fas fa-info-circle"></i>Intermediário</span></h3>
                                     <div class="level-bar progress">
-									    <div class="progress-bar level-bar-inner" role="progressbar" style="width: 94%" aria-valuenow="94"  aria-valuemin="0" aria-valuemax="94"></div>
-									</div><!--//level-bar-->                                   
-                                </div><!--//item-->
-                                
+									    <div class="progress-bar level-bar-inner" role="progressbar" style="width: 60%" aria-valuenow="60"  aria-valuemin="0" aria-valuemax="60"></div>
+									</div>                                  
+                                </div>
+                                <!-- HTML5 e CSS3 -->
                                 <div class="item">
-                                    <h3 class="level-title">HTML5, CSS3, SASS &amp; LESS<span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="You can use the tooltip to explain more about your skill level..."><i class="fas fa-info-circle"></i>Expert</span></h3>
+                                    <h3 class="level-title">HTML5 &amp; CSS3<span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="..."><i class="fas fa-info-circle"></i>Iniciante</span></h3>
                                     <div class="level-bar progress">
-									    <div class="progress-bar level-bar-inner" role="progressbar" style="width: 93%" aria-valuenow="93"  aria-valuemin="0" aria-valuemax="96"></div>
-									</div><!--//level-bar-->                                  
-                                </div><!--//item-->
-                                
+									    <div class="progress-bar level-bar-inner" role="progressbar" style="width: 40%" aria-valuenow="40"  aria-valuemin="0" aria-valuemax="40"></div>
+									</div>                                  
+                                </div>
+                                <!-- JavaScript -->
                                 <div class="item">
-                                    <h3 class="level-title">Ruby on Rails<span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="You can use the tooltip to explain more about your skill level..."><i class="fas fa-info-circle"></i>Pro</span></h3>
+                                    <h3 class="level-title">JavaScript<span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="..."><i class="fas fa-info-circle"></i>Iniciante</span></h3>
                                     <div class="level-bar progress">
-									    <div class="progress-bar level-bar-inner" role="progressbar" style="width: 86%" aria-valuenow="86"  aria-valuemin="0" aria-valuemax="96"></div>
-									</div><!--//level-bar-->                                  
-                                </div><!--//item-->
-                                
+									    <div class="progress-bar level-bar-inner" role="progressbar" style="width: 30%" aria-valuenow="30"  aria-valuemin="0" aria-valuemax="30"></div>
+									</div>                                 
+                                </div>
+                                 <!-- Python -->
+                                 <div class="item">
+                                    <h3 class="level-title">Python<span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="..."><i class="fas fa-info-circle"></i>Iniciante</span></h3>
+                                    <div class="level-bar progress">
+									    <div class="progress-bar level-bar-inner" role="progressbar" style="width: 20%" aria-valuenow="20"  aria-valuemin="0" aria-valuemax="20"></div>
+									</div>                                 
+                                </div>
+
                                 <p><a class="more-link" href="#"><i class="fas fa-external-link-alt"></i>More on GitHub</a></p> 
                             </div>              
                         </div><!--//content-->  
@@ -327,12 +352,9 @@
                         <p>Diversos bancos de dados sem instalar com  <a href="https://github.com/emersonmuniz/emersonmuniz/tree/main/artigos/macos-mavericks-database" target="_blank">DBngin</a>.</p>
                         <div id="rss-feeds" class="content">
     
-
                         </div><!--//content-->  
 
                         <a class="btn btn-cta-secondary" href="https://github.com/emersonmuniz/emersonmuniz/tree/main/artigos" target="_blank"><i class="fas fa-thumbs-up"></i> Mais Artigos</a>                 
-
-                        
 
                     </div><!--//section-inner-->
                 </aside><!--//section-->
@@ -343,16 +365,29 @@
                         <h2 class="heading">Favourite coding music</h2>
                         <div class="content">
                             <ul class="list-unstyled">
-                                <li><i class="fas fa-headphones"></i> <a href="#">Etiam hendrerit urna nunc</a></li>
-                                <li><i class="fas fa-headphones"></i> <a href="#">Ut sollicitudin in mauris non auctor</a></li>
-                                <li><i class="fas fa-headphones"></i> <a href="#">Etiam hendrerit urna nunc</a></li>
-                                <li><i class="fas fa-headphones"></i> <a href="#">Duis et felis bibendum</a></li>
+                                <li><i class="fas fa-headphones"></i> <a href="#">Orquestral </a></li>
+                                <li><i class="fas fa-headphones"></i> <a href="#">Rock </a></li>
+                                <li><i class="fas fa-headphones"></i> <a href="#">Country Music </a></li>
+                            
+                                <style>.codegena{position:relative;width:100%;height:0;padding-bottom:56.27198%;}.codegena 
+                                    iframe{position:absolute;top:0;left:0;width:100%;height:100%;}/*Youtube Embed Code : Created with Codegena.com */
+                                </style>
+                                <div class="codegena">
+                                    <iframe width='500' height='294' 
+                                        src="https://www.youtube.com/embed/videoseries?list=PLe06yASeaWxNRQwKLGAWWGbrcqVpzDwAX&theme=dark&autohide=2"frameborder="1">
+                                    </iframe>
+                                </div>
+                                <div style='font-size: 0.8em'>
+                                            <a href='http://codegena.com/generator/Youtube-Embed-Code-Generator.html'>Created by Codegena.</a>
+                                </div>
+
                             </ul>
                         </div><!--//content-->
                     </div><!--//section-inner-->
                 </aside><!--//section-->
                 
                 <!-- CONERENCIAS -->
+                 <!--
                 <aside class="list conferences aside section">
                     <div class="section-inner shadow-sm rounded">
                         <h2 class="heading">Conferences</h2>
@@ -361,9 +396,10 @@
                                 <li><i class="far fa-calendar-alt"></i> <a href="#" target="_blank">WWDC 2030</a> (San Francisco)</li>
                                 <li><i class="far fa-calendar-alt"></i> <a href="#">Hive</a> (Seattle)</li>
                             </ul>
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </aside><!--//section-->
+                        </div>
+                    </div>
+                </aside>
+                -->
                 
                 <!-- CREDITOS -->
                 <aside class="credits aside section">
@@ -374,16 +410,14 @@
                                 <li><a href="https://getbootstrap.com/" target="_blank"><i class="fas fa-external-link-alt"></i>Bootstrap</a></li>
                                 <li><a href="https://fortawesome.github.io/Font-Awesome/" target="_blank"><i class="fas fa-external-link-alt"></i>FontAwesome</a></li>
                                 <li><a href="https://github.com/coliff/dark-mode-switch"><i class="fas fa-external-link-alt"></i>Dark Mode Switch</a></li>
-                                
                             </ul>
-                            
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </aside><!--//section-->
+                        </div>
+                    </div>
+                </aside>
               
-            </div><!--//secondary-->    
-        </div><!--//row-->
-    </div><!--//masonry-->
+            </div> 
+        </div>
+    </div>
     
     <!-- MANTER CREDITOS PARA USO FREE -->
     <!-- ******FOOTER****** --> 
